@@ -3,18 +3,15 @@ import plotly.express as px
 import pandas as pd
 import numpy as np
 
-# Streamlit app starts here
-st.set_page_config(page_title="Brawn GP: A F1 Story", layout="wide")
-
-# Sidebar for navigation
-st.sidebar.title("Navigation")
-selected_section = st.sidebar.radio("Go to", ("Home", "Overview of F1 Teams", "2003-2008 Season Analysis", "2009 Winning Probability Analysis", "2008 Season Aftermath", "First Race of 2009", "Brawn GP Car Analysis", "2009 First 7 Races Analysis", "Rest of the 2009 Season", "Season Finale"))
-
-# Home Page
-if selected_section == "Home":
-    st.title("Brawn GP: A F1 Story")
-    st.write("Welcome to an interactive exploration of Brawn GP's remarkable journey in Formula 1. Navigate through the sections to discover their legacy.")
-
-# Overview of F1 Teams
-elif selected_section == "Overview of F1 Teams":
-    st.header("Overview of Every Team in F1")
+row0_spacer1, row0_1, row0_spacer2, row0_2, row0_spacer3 = st.columns((.1, 2.3, .1, 1.3, .1))
+with row0_1:
+    st.title('BuLiAn - Bundesliga Analyzer')
+with row0_2:
+    st.text("")
+    st.subheader('Streamlit App by [Tim Denzler](https://www.linkedin.com/in/tim-denzler/)')
+row3_spacer1, row3_1, row3_spacer2 = st.columns((.1, 3.2, .1))
+with row3_1:
+    st.markdown("Hello there! Have you ever spent your weekend watching the German Bundesliga and had your friends complain about how 'players definitely used to run more' ? However, you did not want to start an argument because you did not have any stats at hand? Well, this interactive application containing Bundesliga data from season 2013/2014 to season 2019/2020 allows you to discover just that! If you're on a mobile device, I would recommend switching over to landscape for viewing ease.")
+    st.markdown("You can find the source code in the [BuLiAn GitHub Repository](https://github.com/tdenzl/BuLiAn)")
+    st.markdown("If you are interested in how this app was developed check out my [Medium article](https://tim-denzler.medium.com/is-bayern-m%C3%BCnchen-the-laziest-team-in-the-german-bundesliga-770cfbd989c7)")
+    
